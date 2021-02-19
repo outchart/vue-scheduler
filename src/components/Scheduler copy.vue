@@ -6,7 +6,7 @@
     }"
   >
     <thead>
-      <!-- <tr>
+      <tr>
         <th
           :rowspan="2"
           class="slash"
@@ -40,18 +40,9 @@
           :colspan="cellColAmout"
           @click="handleClickWeek()"
         ></th>
-      </tr> -->
+      </tr>
       <tr>
         <td
-           v-for="(day, dayIndex) in daySerial"
-          :key="day"
-          class="scheduler-hour"
-          :colspan="accuracy"
-          @click="handleClickHour(dayIndex)"
-        >
-          {{ i18n('WEEK_DAYS')[day] }}
-        </td>
-        <!-- <td
           v-for="(hour, hourIndex) in hourSerial"
           :key="hourIndex"
           class="scheduler-hour"
@@ -59,23 +50,23 @@
           @click="handleClickHour(hourIndex)"
         >
           {{ i18n('HOURS', '')[hour] || (hour) }}
-        </td> -->
+        </td>
       </tr>
     </thead>
     <tbody>
       <tr
-        v-for="(hour, hourIndex) in hourSerial"
-        :key="hourIndex"
+        v-for="(day, dayIndex) in daySerial"
+        :key="day"
       >
         <td
           class="scheduler-day-toggle"
-          @click="handleClickDay(hourIndex)"
+          @click="handleClickDay(dayIndex)"
         >
-          {{ i18n('HOURS', '')[hour] || (hour) }}
+          {{ i18n('WEEK_DAYS')[day] }}
         </td>
 
         <td
-          v-for="hourIndex in 7"
+          v-for="hourIndex in cellColAmout"
           :key="hourIndex"
           class="scheduler-hour"
           :class="{
