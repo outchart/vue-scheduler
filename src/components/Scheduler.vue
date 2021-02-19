@@ -6,7 +6,6 @@
     }"
   >
     <thead>
-      <tr>&nbsp;</tr>
       <!-- <tr>
         <th
           :rowspan="2"
@@ -43,6 +42,7 @@
         ></th>
       </tr> -->
       <tr>
+        <td>&nbsp;</td>
         <td
            v-for="(day, dayIndex) in daySerial"
           :key="day"
