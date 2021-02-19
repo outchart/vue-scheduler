@@ -65,19 +65,19 @@
     </thead>
     <tbody>
       <tr
-        v-for="(hour, index) in hourSerial"
-        :key="index"
+        v-for="(hour, hourIndex) in hourSerial"
+        :key="hourIndex"
       >
         <td
           class="scheduler-hour"
-          @click="handleClickDay(index)"
+          @click="handleClickDay(hourIndex)"
         >
           {{ i18n('HOURS', '')[hour] || (hour) }}
         </td>
 
         <td
-          v-for="hourIndex in 7"
-          :key="hourIndex"
+          v-for="dayIndex in 7"
+          :key="dayIndex"
           class="scheduler-hour"
           :class="{
             'scheduler-active': isCellSelected(day, hourIndex - 1)
