@@ -80,12 +80,12 @@
           :key="dayIndex"
           class="scheduler-hour"
           :class="{
-            'scheduler-active': isCellSelected(day, hourIndex - 1)
+            'scheduler-active': isCellSelected(hourIndex - 1, dayIndex)
           }"
-          @mousedown="handleMouseDown(dayIndex, hourIndex - 1)"
-          @mousemove="handleMouseMove(dayIndex, hourIndex - 1)"
-          @touchstart="handleMouseDown(dayIndex, hourIndex - 1)"
-          @touchmove="handleMouseMove(dayIndex, hourIndex - 1)"
+          @mousedown="handleMouseDown(hourIndex - 1, dayIndex)"
+          @mousemove="handleMouseMove(hourIndex - 1, dayIndex)"
+          @touchstart="handleMouseDown(hourIndex - 1, dayIndex)"
+          @touchmove="handleMouseMove(hourIndex - 1, dayIndex)"
         />
       </tr>
     </tbody>
