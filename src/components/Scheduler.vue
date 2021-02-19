@@ -6,6 +6,7 @@
     }"
   >
     <thead>
+      <tr>&nbsp;</tr>
       <!-- <tr>
         <th
           :rowspan="2"
