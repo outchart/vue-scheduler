@@ -46,7 +46,7 @@
         <td
            v-for="(day, dayIndex) in daySerial"
           :key="day"
-          class="scheduler-hour"
+          class="scheduler-day-toggle"
           :colspan="accuracy"
           @click="handleClickHour(dayIndex)"
         >
@@ -65,12 +65,12 @@
     </thead>
     <tbody>
       <tr
-        v-for="(hour, hourIndex) in hourSerial"
-        :key="hourIndex"
+        v-for="(hour, index) in hourSerial"
+        :key="index"
       >
         <td
-          class="scheduler-day-toggle"
-          @click="handleClickDay(hourIndex)"
+          class="scheduler-hour"
+          @click="handleClickDay(index)"
         >
           {{ i18n('HOURS', '')[hour] || (hour) }}
         </td>
