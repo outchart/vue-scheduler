@@ -41,8 +41,8 @@ export function makeMatrix (startCoord, endCoord, startOfWeek = 1, ignoreWeekend
   const fromRow = startCoord[0] < endCoord[0] ? startCoord[0] : endCoord[0]
   const steps = Math.abs(startCoord[0] - endCoord[0]) + 1
   const daySerial = makeDaySerial(fromRow + startOfWeek, steps, ignoreWeekend)
-  for (let i = 0; i < daySerial.length; i++) {
-    matrix[daySerial[i]] = colArr.slice(0)
+  for (let i = 0; i < colArr.length; i++) {
+    matrix[daySerial[i]] = daySerial.slice(0)
   }
   return matrix
 }
