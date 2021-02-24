@@ -72,7 +72,9 @@
           class="scheduler-hour"
           @click="handleClickHour(hourIndex)"
         >
-          {{ i18n('HOURS', '')[hour] || (hour) }}
+          <!-- {{ i18n('HOURS', '')[hour] || (hour) }} -->
+          {{hour}}:00<br>
+          {{hour+1}}:00
         </td>
 
         <td
