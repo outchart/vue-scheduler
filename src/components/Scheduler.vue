@@ -296,8 +296,8 @@ export default {
     },
     handleClickDay (dayIndex) {
       if (this.disabled) { return }
-      const startCoord = [dayIndex, 0] // [row, col] row start form 1
-      const endCoord = [dayIndex, this.hours * this.accuracy - 1]
+      const startCoord = [0, dayIndex] // [row, col] row start form 1
+      const endCoord = [this.hours * this.accuracy - 1, dayIndex]
       const selectMode = this.getRangeSelectMode(startCoord, endCoord)
       this.updateToggle(startCoord, endCoord, selectMode)
     },
