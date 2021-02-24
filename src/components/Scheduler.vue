@@ -48,7 +48,7 @@
           :key="day"
           class="scheduler-day-toggle"
           :colspan="accuracy"
-          @click="handleClickHour(dayIndex)"
+          @click="handleClickDay(dayIndex)"
         >
           {{ i18n('WEEK_DAYS')[day] }}
         </td>
@@ -70,7 +70,7 @@
       >
         <td
           class="scheduler-hour"
-          @click="handleClickDay(hourIndex)"
+          @click="handleClickHour(hourIndex)"
         >
           {{ i18n('HOURS', '')[hour] || (hour) }}
         </td>
