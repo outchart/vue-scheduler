@@ -435,14 +435,14 @@ export default {
       // 替换模式下，弃用之前的选区，直接使用当前选区
       let i
       if (selectMode === SelectMode.REPLACE) {
-        for (i = 0; i < 7; i++) {
+        for (i = 0; i < 24; i++) {
           if (current[i] && current[i].length) {
             res[i] = current[i].slice(0)
           }
         }
         return res
       }
-      for (i = 0; i < 7; i++) {
+      for (i = 0; i < 24; i++) {
         if (!current[i]) {
           if (origin[i] && origin[i].length) {
             res[i] = origin[i].slice(0)
