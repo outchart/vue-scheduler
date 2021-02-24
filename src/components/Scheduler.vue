@@ -399,7 +399,7 @@ export default {
       }
       // TODO 未过滤 disabled 的格子
       var day = this.selected[this.toDay(coord[1])]
-      return day && ~day.indexOf(coord[1]) ? SelectMode.MINUS : SelectMode.JOIN
+      return day && ~day.indexOf(coord[0]) ? SelectMode.MINUS : SelectMode.JOIN
     },
 
     /**
