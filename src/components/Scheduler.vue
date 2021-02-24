@@ -80,7 +80,7 @@
           :key="dayIndex"
           class="scheduler-hour"
           :class="{
-            'scheduler-active': isCellSelected(hourIndex-1, dayIndex)
+            'scheduler-active': isCellSelected(hourIndex+1, dayIndex)
           }"
           @mousedown="handleMouseDown(hourIndex + 1, dayIndex)"
           @mousemove="handleMouseMove(hourIndex + 1, dayIndex)"
