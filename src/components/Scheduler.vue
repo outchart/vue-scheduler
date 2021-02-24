@@ -73,8 +73,7 @@
           @click="handleClickHour(hourIndex)"
         >
           <!-- {{ i18n('HOURS', '')[hour] || (hour) }} -->
-          {{hour}}:00<br>
-          {{hour+1}}:00
+          {{hour}}:00 &mdash; {{hour+1}}:00
         </td>
 
         <td
