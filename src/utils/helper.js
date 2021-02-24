@@ -36,7 +36,6 @@ export function makeDaySerial (startDay, days, ignoreWeekend) {
 }
 
 export function makeMatrix (startCoord, endCoord, startOfWeek = 1, ignoreWeekend) {
-  console.log('start:' + startCoord + ' end coord:' + endCoord)
   const matrix = {}
   const colArr = makeRange(startCoord[1], endCoord[1])
   const fromRow = startCoord[0] < endCoord[0] ? startCoord[0] : endCoord[0]
