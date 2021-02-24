@@ -366,13 +366,14 @@ export default {
       // 计算已使用的时间格子
       // TODO 未过滤 disabled 的格子
       var used = 0
-      for (var i = 0; i < rows; i++) {
-        var day = this.toDay(startRow + i)
+      for (var i = 0; i < cols; i++) {
+        // var day = this.toDay(startRow + i)
+        var day = this.toDay(startCol + i)
         var data = this.selected[day]
         if (!data) {
           continue
         }
-        for (var j = startCol; j <= endCol; j++) {
+        for (var j = startRow; j <= endRow; j++) {
           if (data.indexOf(j) >= 0) {
             used++
           }
