@@ -35,7 +35,7 @@ export function makeDaySerial (startDay, days, ignoreWeekend) {
   return serial
 }
 
-export function makeMatrix (startCoord, endCoord, startOfWeek = 1, ignoreWeekend) {
+export function makeMatrix (endCoord, startCoord, startOfWeek = 1, ignoreWeekend) {
   const matrix = {}
   const colArr = makeRange(startCoord[1], endCoord[1])
   const fromRow = startCoord[0] < endCoord[0] ? startCoord[0] : endCoord[0]
