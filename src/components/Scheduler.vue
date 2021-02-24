@@ -289,8 +289,8 @@ export default {
       }
       const fromColIndex = hour * this.accuracy
       const toColIndex = fromColIndex + this.accuracy - 1
-      const startCoord = [this.ignoreWeekend ? 1 : 0, fromColIndex] // [row, col] row start form 1
-      const endCoord = [this.ignoreWeekend ? 5 : 6, toColIndex]
+      const startCoord = [fromColIndex, this.ignoreWeekend ? 1 : 0] // [row, col] row start form 1
+      const endCoord = [toColIndex, this.ignoreWeekend ? 5 : 6]
       const selectMode = this.getRangeSelectMode(startCoord, endCoord)
       this.updateToggle(startCoord, endCoord, selectMode)
     },
