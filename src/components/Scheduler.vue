@@ -203,7 +203,7 @@ export default {
       return this.accuracy * 12
     },
     cellColAmout () {
-      return this.daySerial
+      return 8
     }
   },
 
