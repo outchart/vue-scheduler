@@ -203,7 +203,7 @@ export default {
       return this.accuracy * 12
     },
     cellColAmout () {
-      return 8
+      return 7
     }
   },
 
@@ -238,7 +238,7 @@ export default {
       }
       return i18n(key, defaults)
     },
-    isCellSelected (day, hourIndex) {
+    isCellSelected (hourIndex, day) {
       const { tempSelected = {}} = this
       const selectedHours = tempSelected[day]
       if (selectedHours && ~selectedHours.indexOf(hourIndex)) {
