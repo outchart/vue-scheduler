@@ -28,7 +28,7 @@ export function makeDaySerial (startDay, days, ignoreWeekend) {
         day -= 5
       }
     } else {
-      day %= 7
+      day %= 24
     }
     serial.push(day)
   }
