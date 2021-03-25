@@ -191,7 +191,7 @@ export default {
       return serial
     },
     daySerial () {
-      const serial = makeDaySerial(this.startOfWeekFixed, this.ignoreWeekend ? 5 : 7, this.ignoreWeekend)
+      const serial = makeDaySerial(this.startOfWeekFixed, this.ignoreWeekend ? 6 : 7, this.ignoreWeekend)
       return serial
     },
     hours () {
@@ -275,8 +275,8 @@ export default {
       if (this.disabled) {
         return
       }
-      const startCoord = [this.ignoreWeekend ? 1 : 0, 0] // [row, col] row start form 1
-      const endCoord = [this.ignoreWeekend ? 5 : 6, this.hours * this.accuracy - 1]
+      const startCoord = [this.ignoreWeekend ? 1 : 1, 0] // [row, col] row start form 1
+      const endCoord = [this.ignoreWeekend ? 6 : 7, this.hours * this.accuracy - 1]
       const selectMode = this.getRangeSelectMode(startCoord, endCoord)
       this.updateToggle(startCoord, endCoord, selectMode)
     },
