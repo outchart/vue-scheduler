@@ -4,7 +4,7 @@
  * @param {Number} to
  * @return {Array}
  */
-export function makeRange (from, to) {
+export function makeRange(from, to) {
   // 保证 from <= to
   if (from > to) {
     from = from + to
@@ -19,7 +19,7 @@ export function makeRange (from, to) {
   return res
 }
 
-export function makeDaySerial (startDay, days, ignoreWeekend) {
+export function makeDaySerial(startDay, days, ignoreWeekend) {
   const serial = []
   for (let i = 0; i < days; i++) {
     let day = startDay + i
@@ -35,7 +35,7 @@ export function makeDaySerial (startDay, days, ignoreWeekend) {
   return serial
 }
 
-export function makeMatrix (startCoord, endCoord, startOfWeek = 1, ignoreWeekend) {
+export function makeMatrix(startCoord, endCoord, startOfWeek = 1, ignoreWeekend) {
   const matrix = {}
   const colArr = makeRange(startCoord[1], endCoord[1])
   const fromRow = startCoord[0] < endCoord[0] ? startCoord[0] : endCoord[0]
@@ -52,7 +52,7 @@ export function makeMatrix (startCoord, endCoord, startOfWeek = 1, ignoreWeekend
  * @param {Array} origin
  * @param {Array} addition
  */
-export function mergeArray (origin, addition) {
+export function mergeArray(origin, addition) {
   const hash = {}
   const res = []
 
@@ -77,7 +77,7 @@ export function mergeArray (origin, addition) {
  * @param {Array} origin 原数组
  * @param {Array} reject 要去除的数组
  */
-export function rejectArray (origin, reject) {
+export function rejectArray(origin, reject) {
   const hash = {}
   const res = []
 
@@ -96,7 +96,7 @@ export function rejectArray (origin, reject) {
   })
 }
 
-export function sortCoord (num1, num2) {
+export function sortCoord(num1, num2) {
   if (num1 > num2) {
     return [num2, num1]
   }

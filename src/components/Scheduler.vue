@@ -81,12 +81,12 @@
           :key="dayIndex"
           class="scheduler-hour"
           :class="{
-            'scheduler-active': isCellSelected(hourIndex, dayIndex)
+            'scheduler-active': isCellSelected(hourIndex, dayIndex-1)
           }"
-          @mousedown="handleMouseDown(hourIndex, dayIndex)"
-          @mousemove="handleMouseMove(hourIndex, dayIndex)"
-          @touchstart="handleMouseDown(hourIndex, dayIndex)"
-          @touchmove="handleMouseMove(hourIndex, dayIndex)"
+          @mousedown="handleMouseDown(hourIndex, dayIndex-1)"
+          @mousemove="handleMouseMove(hourIndex, dayIndex-1)"
+          @touchstart="handleMouseDown(hourIndex, dayIndex-1)"
+          @touchmove="handleMouseMove(hourIndex, dayIndex-1)"
         />
       </tr>
     </tbody>
@@ -290,15 +290,15 @@ export default {
       }
       const fromColIndex = hour * this.accuracy
       const toColIndex = fromColIndex + this.accuracy - 1
-      const startCoord = [fromColIndex, this.ignoreWeekend ? 1 : 1] // [row, col] row start form 1
-      const endCoord = [toColIndex, this.ignoreWeekend ? 7 : 8]
+      const startCoord = [fromColIndex, this.ignoreWeekend ? 1 : 0] // [row, col] row start form 1
+      const endCoord = [toColIndex, this.ignoreWeekend ? 5 : 6]
       const selectMode = this.getRangeSelectMode(startCoord, endCoord)
       this.updateToggle(startCoord, endCoord, selectMode)
     },
     handleClickDay (dayIndex) {
       if (this.disabled) { return }
-      const startCoord = [0, dayIndex + 1] // [row, col] row start form 1
-      const endCoord = [this.hours * this.accuracy - 1, dayIndex + 1]
+      const startCoord = [0, dayIndex] // [row, col] row start form 1
+      const endCoord = [this.hours * this.accuracy - 1, dayIndex]
       const selectMode = this.getRangeSelectMode(startCoord, endCoord)
       this.updateToggle(startCoord, endCoord, selectMode)
     },
