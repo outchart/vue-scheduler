@@ -69,7 +69,7 @@
         :key="hourIndex"
       >
         <td
-          class="scheduler-hour scheduler-hour-title"
+          class="scheduler-hour"
           @click="handleClickHour(hourIndex)"
         >
           <!-- {{ i18n('HOURS', '')[hour] || (hour) }} -->
@@ -291,7 +291,7 @@ export default {
       const fromColIndex = hour * this.accuracy
       const toColIndex = fromColIndex + this.accuracy - 1
       const startCoord = [fromColIndex, this.ignoreWeekend ? 1 : 1] // [row, col] row start form 1
-      const endCoord = [toColIndex, this.ignoreWeekend ? 6 : 7]
+      const endCoord = [toColIndex, this.ignoreWeekend ? 7 : 8]
       const selectMode = this.getRangeSelectMode(startCoord, endCoord)
       this.updateToggle(startCoord, endCoord, selectMode)
     },
