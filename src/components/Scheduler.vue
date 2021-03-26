@@ -69,7 +69,7 @@
         :key="hourIndex"
       >
         <td
-          class="scheduler-hour scheduler-hour-title"
+          class="scheduler-hour"
           @click="handleClickHour(hourIndex)"
         >
           <!-- {{ i18n('HOURS', '')[hour] || (hour) }} -->
